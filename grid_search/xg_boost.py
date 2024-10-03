@@ -16,7 +16,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.experimental import enable_halving_search_cv  # noqa
 from sklearn.model_selection import GridSearchCV, HalvingGridSearchCV
 import pandas
-from src.get_data import get_data_normalized_under_sample
+from src.get_data import get_data_normalized_under_sample, get_data_normalized
 
 def mainFunction():
     print('XG Boost')
@@ -27,7 +27,7 @@ def mainFunction():
         'max_features': ['sqrt', 'log2']
     }
 
-    data = get_data_normalized_under_sample()
+    data = get_data_normalized()
 
     clf = GradientBoostingClassifier()
 
@@ -37,7 +37,7 @@ def mainFunction():
 
     print(hgs.best_params_)
     # print(hgs.best_score_)
-    # print(hgs.best_estimator_)
+    print(hgs.best_estimator_)
     # print(hgs.best_index_)
     # print(hgs.cv_results_)
     # df = pandas.DataFrame(hgs.cv_results_)

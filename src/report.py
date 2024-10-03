@@ -9,5 +9,5 @@ def report(predicted, s4_test, name):
 
     disp = metrics.ConfusionMatrixDisplay.from_predictions(s4_test, predicted)
     disp.figure_.suptitle(f"Confusion Matrix ({name})")
-    print(f"Confusion matrix:\n{disp.confusion_matrix}")
+    print(f"Confusion matrix: {name}\n{disp.confusion_matrix}")
     plt.show()

@@ -39,7 +39,7 @@ def mainFunction():
 
     print(hgs.best_params_)
     # print(hgs.best_score_)
-    # print(hgs.best_estimator_)
+    print(hgs.best_estimator_)
     # print(hgs.best_index_)
     # print(hgs.cv_results_)
     # df = pandas.DataFrame(hgs.cv_results_)
