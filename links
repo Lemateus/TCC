@@ -5,3 +5,13 @@ https://stackoverflow.com/questions/59843700/train-machine-learning-model-with-s
 https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
 
 https://mariofilho.com/como-prever-series-temporais-com-lstm-em-python/
+
+potential data:
+
+/home/lemateus/TCC/cintilacao/data/PRU2_2019-03-01_2019-03-15_bb1939cfed905646776053f7ef6ac1b3EDITADO.csv -> svid 138
+
+/home/lemateus/TCC/cintilacao/data/PRU2_2019-03-16_2019-03-31_af08e202d91d0e64692c198163ad4e18EDITADO.csv -> svid 125
+
+/home/lemateus/TCC/cintilacao/data/PRU2_2018-09-01_2018-09-15_9464c9cda8dce80d71af4c0f7524355bEDITADO.csv -> svid 125
+
+https://cnvrg.io/pytorch-lstm/
