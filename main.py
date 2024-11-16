@@ -1,8 +1,8 @@
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 from sklearn.model_selection import cross_val_predict, cross_validate
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
-from src.get_data import get_data_normalized, get_data_normalized_under_sample, get_data, get_data_normalized_csv
+from src.get_data import get_data_normalized, get_data_normalized_under_sample, get_data, get_data_normalized_csv, get_data_normalized_regression
 from grid_search import svc_grid, RandomF_grid, decisionT_grid, MLP_grid
 from sklearn.model_selection import StratifiedKFold
 from grid_search import KN_grid, Ada_grid, xg_boost
@@ -59,4 +59,11 @@ def mult_files():
 
 # training()
 # test()
-mult_files()
+# mult_files()
+
+def regression():
+    data = get_data_normalized_regression()
+
+    print()
+
+regression()

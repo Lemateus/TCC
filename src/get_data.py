@@ -1,5 +1,6 @@
 import math
 from sklearn.utils import Bunch
+import pandas as pd
 
 def get_data_normalized():
     data = Bunch()
@@ -254,3 +255,25 @@ def get_data():
     return data
 
 get_data()
+
+def get_data_normalized_regression():
+    data = pd.read_csv('/home/lemateus/TCC/cintilacao/data/PRU2_2018-09-01_2018-09-15_9464c9cda8dce80d71af4c0f7524355bEDITADO.csv', na_values=[' ', ''])
+
+    data['time_utc'] = pd.to_datetime(data['time_utc'], format='%Y-%m-%d %H:%M:%S')
+    data = data.loc[data['time_utc']>='2018-09-04 14:10:00']
+    data = data[data[' svid'] == 131]
+    data = data[['time_utc', ' svid', ' azim', ' elev', ' s4']]
+    data.columns = ['time', 'svid', 'azim', 'elev', 's4']
+    data['s4'] = data['s4'].astype(float)
+    # data.dropna(inplace=True)
+    data.reset_index(drop=True, inplace=True)
+    # print(data.dtypes)
+    # data = data[:1000]
+    # print(data)
+    # data = data[:50]
+
+    # train = data.loc[data['ds']<'2018-09-14 23:59:00']
+    # test = data.loc[data['ds']>='2018-09-14 23:59:00']
+    data.plot(x='time', y='s4')
+    # data.to_csv('/home/lemateus/TCC/cintilacao/only_125.csv')
+    data.interpolate('linear')

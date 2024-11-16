@@ -49,7 +49,7 @@ report done
 ```
 
 
-## MPL Classifier
+## MLP Classifier
 
 `MLPClassifier(activation='relu', learning_rate='invscaling', solver='adam', max_iter=400)`
 
